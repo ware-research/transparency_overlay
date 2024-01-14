@@ -119,28 +119,28 @@ class ImageDisplayApp:
             self.canvas.config(width=image.width, height=image.height)
             self.canvas.create_image(0, 0, anchor=tk.NW, image=photo_image)
             self.canvas.image = photo_image
+
             '''
-            the resize_image function triggers the transparent background and correct 
-            image size. Not really sure why, but calling resize_image here resolved this issue.
-            Note, this should not change the actual image size.
+            The resize_image function forces the transparent background to update and correct the
+            image size. Calling resize_image after opacity change forces the transparency to 
+            update, regardless of if the resize lock is on. The image size will not change. 
             '''
-            self.resize_image("OverrideLock") 
+            self.resize_image(None) 
 
     def resize_image(self, event):
      			 			
         '''
-        first, check if an image has been loaded, then check if resize has been locked.
-        then, if this function is called from within the update_opacity function and resize 
-        is locked, it causes the image to be "resized" to the same size, which forces the 
-        transparent background to update. 
-        '''        
-        if hasattr(self, "image") and (self.lockresize == False or event == "OverrideLock"):
+        First, check if an image has been loaded, then check if resize has been locked.
+        Then, if this resize is locked, it causes the image to be "resized" to the same size, 
+        which forces the transparent background to update. 
+        '''  
+        if hasattr(self, "image"):
             image = self.image.copy()
 
             if self.lockresize == False:
                 self.new_width = self.root.winfo_width()
                 self.new_height = int(self.new_width / (image.width / image.height))
-            
+
             new_width = self.new_width
             new_height = self.new_height
 
@@ -170,7 +170,7 @@ class ImageDisplayApp:
 
     def on_mouse_wheel(self, event):
      			 			
-        if hasattr(self, "image") and self.lockresize == False and not self.lockscroll:
+        if hasattr(self, "image") and not self.lockscroll:
             self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
     def show_help(self):
