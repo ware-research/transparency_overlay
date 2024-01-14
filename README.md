@@ -10,15 +10,15 @@ Load an image, set the transparency and display the image on top of your screen.
 ## User Guide:
 You will be prompted to upload an image. select any png or jpeg image.
 
-________TRANSPARENCY_________
+________TRANSPARENCY________
 Use the number keys to control the transparency:
 Press 1-9 to set transparency (1=10%, 9=90%)
 Press '0' to reset transparency
 
-_______IMAGE RESIZING________
+_______IMAGE RESIZING______
 Drag from the top left corner to resize image:
 Press 'l' to toggle resizing lock
 
-_________SCROLLING___________
+_________SCROLLING________
 Scroll using mouse wheel if your image is larger than the set window size:
 Press 'k' to toggle scroll lock
