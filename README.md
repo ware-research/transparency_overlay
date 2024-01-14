@@ -15,10 +15,10 @@ Use the number keys to control the transparency:
 Press 1-9 to set transparency (1=10%, 9=90%)
 Press '0' to reset transparency
 
-_______IMAGE RESIZING______
+_______IMAGE RESIZING_______
 Drag from the top left corner to resize image:
 Press 'l' to toggle resizing lock
 
-_________SCROLLING________
+_________SCROLLING_________
 Scroll using mouse wheel if your image is larger than the set window size:
 Press 'k' to toggle scroll lock
