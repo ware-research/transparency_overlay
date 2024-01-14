@@ -1,0 +1,12 @@
+cff-version: 1.0.0
+message: "If you use this software, or significant portions of this software, please cite it as below."
+authors:
+  - family-names: Ware
+    given-names: Jason
+    orcid: https://orcid.org/0000-0002-5530-5843
+title: "Transparency Overlay"
+version: 1.0
+identifiers:
+  - type: doi
+    value:  10.5281/zenodo.10511356
+date-released: 2024-01-14
